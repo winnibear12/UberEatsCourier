@@ -1,11 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
-import orders from "../../../assets/data/orders.json";
 import { Entypo } from "@expo/vector-icons";
 
-const order = orders[0];
 
-const OrderItem = () => {
+const OrderItem = ({order}) => {
   return (
 
       <View

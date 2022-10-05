@@ -8,7 +8,9 @@ const order = orders[0];
 export default function App() {
   return (
     <View style={styles.container}>
-        <OrderItem />
+        <OrderItem order = {order}/>
+        <OrderItem order = {orders[1]}/>
+        <OrderItem order = {orders[2]}/>
         <StatusBar style="auto" />
       </View>
     
