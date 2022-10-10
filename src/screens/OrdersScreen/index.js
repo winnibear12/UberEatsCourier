@@ -1,9 +1,8 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo} from "react";
 import {
   View,
   Text,
   FlatList,
-  Dimensions,
   useWindowDimensions,
 } from "react-native";
 import BottomSheet from "@gorhom/bottom-sheet";
@@ -14,9 +13,12 @@ import MapView, { Marker } from "react-native-maps";
 import {Entypo} from "@expo/vector-icons"
 
 const OrdersScreen = () => {
+
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => ["12%", "95%"], []);
   const { width, height } = useWindowDimensions();
+
+  const snapPoints = useMemo(() => ["12%", "95%"], []);
+
 
   return (
     <View style={{ backgroundColor: "lightblue", flex: 1 }}>
@@ -27,12 +29,13 @@ const OrdersScreen = () => {
         }}
        showsUserLocation
        followsUserLocation
+       
       >
         {orders.map((order)=>(
            <Marker
-          
+           key={order.id}
            title={order.Restaurant.name}
-           description={"order.Restaurant.address"}
+           description={order.Restaurant.address}
            coordinate={{ latitude: order.Restaurant.lat, longitude: order.Restaurant.lng }}
          >
            <View style={{backgroundColor:'green', padding:5, borderRadius:20}}>

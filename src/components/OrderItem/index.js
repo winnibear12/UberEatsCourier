@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image,Pressable } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -25,7 +24,7 @@ const OrderItem = ({order}) => {
             width: "25%",
             height: "100%",
             borderBottomLeftRadius: 10,
-            borderTopLeftRadius: 12,
+            borderTopLeftRadius: 10,
           }}
         />
         <View style={{ marginLeft: 10, flex:1, paddingVertical:1 }}>
@@ -59,7 +58,7 @@ const OrderItem = ({order}) => {
       </Pressable>
 
   );
-}
+};
 
 export default OrderItem;
 
