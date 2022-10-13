@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "ubereats",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-10-13T05:18:12.707Z"
+}

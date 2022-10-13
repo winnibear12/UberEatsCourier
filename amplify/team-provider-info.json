@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ubereats-dev-234404-authRole",
+      "UnauthRoleArn": "arn:aws:iam::286200834627:role/amplify-ubereats-dev-234404-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::286200834627:role/amplify-ubereats-dev-234404-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-ubereats-dev-234404-deployment",
+      "UnauthRoleName": "amplify-ubereats-dev-234404-unauthRole",
+      "StackName": "amplify-ubereats-dev-234404",
+      "StackId": "arn:aws:cloudformation:us-east-2:286200834627:stack/amplify-ubereats-dev-234404/49b1a220-4aa9-11ed-991e-0650d337b4a4",
+      "AmplifyAppId": "dziah9vm4071b"
+    },
+    "categories": {
+      "api": {
+        "ubereats": {}
+      }
+    }
+  },
+  "uberone": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ubereats-uberone-05453-authRole",
+      "UnauthRoleArn": "arn:aws:iam::286200834627:role/amplify-ubereats-uberone-05453-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::286200834627:role/amplify-ubereats-uberone-05453-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-ubereats-uberone-05453-deployment",
+      "UnauthRoleName": "amplify-ubereats-uberone-05453-unauthRole",
+      "StackName": "amplify-ubereats-uberone-05453",
+      "StackId": "arn:aws:cloudformation:us-east-2:286200834627:stack/amplify-ubereats-uberone-05453/2ecece60-4ab3-11ed-a405-022163efa3ae",
+      "AmplifyAppId": "dziah9vm4071b"
+    },
+    "categories": {
+      "api": {
+        "ubereats": {}
+      }
+    }
+  }
+}
