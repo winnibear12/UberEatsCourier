@@ -32,6 +32,9 @@
     "categories": {
       "api": {
         "ubereats": {}
+      },
+      "auth": {
+        "UberEats": {}
       }
     }
   }

@@ -1,4 +1,4 @@
-import { useRef, useMemo} from "react";
+import { useRef, useMemo, useState, useEffect} from "react";
 import {
   View,
   Text,
@@ -11,14 +11,19 @@ import orders from "../../../assets/data/orders.json";
 import OrderItem from "../../components/OrderItem";
 import MapView, { Marker } from "react-native-maps";
 import {Entypo} from "@expo/vector-icons"
+import {Order} from '../../models';
+import { DataStore } from "aws-amplify";
 
 const OrdersScreen = () => {
-
+  const [orders, setOrders] = useState([]);
   const bottomSheetRef = useRef(null);
   const { width, height } = useWindowDimensions();
 
   const snapPoints = useMemo(() => ["12%", "95%"], []);
 
+  useEffect(()=>{
+    DataStore.query(Order).then(setOrders);
+  },[])
 
   return (
     <View style={{ backgroundColor: "lightblue", flex: 1 }}>

@@ -33,8 +33,8 @@ export declare class Courier {
   readonly id: string;
   readonly name: string;
   readonly sub: string;
-  readonly lat?: string | null;
-  readonly lng?: string | null;
+  readonly lat?: number | null;
+  readonly lng?: number | null;
   readonly TransporationsMode: TransportationModes | keyof typeof TransportationModes;
   constructor(init: ModelInit<Courier>);
   static copyOf(source: Courier, mutator: (draft: MutableModel<Courier>) => MutableModel<Courier> | void): Courier;
