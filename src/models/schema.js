@@ -761,7 +761,8 @@ export const schema = {
                 "COOKING",
                 "READY_FOR_PICKUP",
                 "PCIKED_UP",
-                "COMPLETED"
+                "COMPLETED",
+                "ACCEPTED"
             ]
         }
     },

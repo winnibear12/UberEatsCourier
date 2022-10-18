@@ -2,10 +2,9 @@ import { useRef, useMemo, useState, useEffect} from "react";
 import {
   View,
   Text,
-  FlatList,
   useWindowDimensions,
 } from "react-native";
-import BottomSheet from "@gorhom/bottom-sheet";
+import BottomSheet, {BottomSheetFlatList} from "@gorhom/bottom-sheet";
 import "react-native-gesture-handler";
 import orders from "../../../assets/data/orders.json";
 import OrderItem from "../../components/OrderItem";
@@ -22,7 +21,7 @@ const OrdersScreen = () => {
   const snapPoints = useMemo(() => ["12%", "95%"], []);
 
   useEffect(()=>{
-    DataStore.query(Order).then(setOrders);
+    DataStore.query(Order,(order)=> order.status("eq", "READY_FOR_PICKUP")).then(setOrders);
   },[])
 
   return (
@@ -68,7 +67,7 @@ const OrdersScreen = () => {
             Available Orders:{orders.length}
           </Text>
         </View>
-        <FlatList
+        <BottomSheetFlatList
           data={orders}
           renderItem={({ item }) => <OrderItem order={item} />}
         />

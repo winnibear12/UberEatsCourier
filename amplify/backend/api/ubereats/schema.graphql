@@ -25,6 +25,7 @@ enum OrderStatus {
   READY_FOR_PICKUP
   PCIKED_UP
   COMPLETED
+  ACCEPTED
 }
 
 type OrderDish @model @auth(rules: [{allow: public}]) {

@@ -36,7 +36,7 @@ const OrderItem = ({order}) => {
             borderTopLeftRadius: 10,
           }}
         />
-        <View style={{ marginLeft: 10, flex:1, paddingVertical:1 }}>
+        <View style={{ marginLeft: 10, flex:1, paddingVertical:5 }}>
           <Text style={{ fontSize: 18, fontWeight: "500" }}>
             {order.Restaurant.name}
           </Text>
